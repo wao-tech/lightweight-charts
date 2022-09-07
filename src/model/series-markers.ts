@@ -44,6 +44,12 @@ export interface SeriesMarker<TimeType> {
 	 * @defaultValue `1`
 	 */
 	size?: number;
+	/**
+	 * The optional image of the marker.
+	 *
+	 * @defaultValue ``
+	 */
+	image?: string;
 
 	/**
 	 * @internal

@@ -28,6 +28,7 @@ export interface SeriesMarkerRendererDataItem extends TimedValue {
 	internalId: number;
 	externalId?: string;
 	text?: SeriesMarkerText;
+	image?: string;
 }
 
 export interface SeriesMarkerRendererData {
@@ -115,7 +116,7 @@ function drawShape(item: SeriesMarkerRendererDataItem, ctx: CanvasRenderingConte
 			drawArrow(true, ctx, item.x, item.y, item.size);
 			return;
 		case 'circle':
-			drawCircle(ctx, item.x, item.y, item.size);
+			drawCircle(ctx, item.x, item.y, item.size, item.image);
 			return;
 		case 'square':
 			drawSquare(ctx, item.x, item.y, item.size);
